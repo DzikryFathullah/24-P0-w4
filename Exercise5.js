@@ -3,9 +3,14 @@ function ubahHuruf(kata) {
     var hasil = ''
     for (var i = 0; i < kata.length; i++) {
         for (var j = 0; j < alphabeth.length; j++) {
-            if (kata[i] === alphabeth[j]) [
-                hasil += alphabeth[j + 1]
-            ]
+            if (kata[i] === alphabeth[j]) {
+                if (alphabeth[j + 1] == undefined) {
+                    hasil += alphabeth[0]
+                } else {
+                    hasil += alphabeth[j + 1]
+                }
+            }
+
         }
     }
     return hasil
