@@ -3,14 +3,11 @@ function hitungHuruf(kata) {
     var kataPilihan = null
     var maxNilaiKata = 0
     var storeHuruf = []
-
     for (var index = 0; index < perKata.length; index++) { // Index untuk kata
         var nilaiKata = 0
         var perHuruf = perKata[index].split('')
-
         for (let indexHuruf = 0; indexHuruf < perHuruf.length; indexHuruf++) { // index untuk huruf
             var counterHuruf = 0
-
             for (let indexDalamHuruf = 0; indexDalamHuruf < perHuruf.length; indexDalamHuruf++) { //index untuk mencari huruf
                 if (perHuruf[indexDalamHuruf] === perHuruf[indexHuruf]) {
                     counterHuruf++
@@ -31,9 +28,7 @@ function hitungHuruf(kata) {
                         nilaiKata += counterHuruf
                         storeHuruf.push(perHuruf[indexHuruf])
                     }
-
                 }
-
             }
         }
         storeHuruf = []
